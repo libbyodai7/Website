@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Interactive Letters</title>
+<link href="styles.css" media="screen" type="text/css" rel="stylesheet"/> 
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+<link href="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js" type="text/javascript"/> 
+
+
+
+
+</head>
+
+<body>
+	<div id="bg" > 
+        <header> 
+            <h1> press a letter on the keyboard </h1> 
+        </header>
+    
+        <div id="letters"> 
+            <div id="a">
+            <audio id = "a1" src="audio/a.m4a" preload = "auto"> </audio> 
+            <img src="a.jpg"/> 
+            </div> 
+            
+            <div id="b">
+            <img src="b.jpg"/> 
+            <audio id = "b1" src="audio/b.m4a" preload = "auto"> </audio> 
+            </div>
+            
+            <div id="c">
+            <img src="c.jpg"/> 
+            <audio id = "c1" src="audio/c.m4a" preload = "auto"> </audio> 
+            </div>
+            
+            <div id="d">
+            <img src="d.jpg"/>
+            <audio id = "d1" src="audio/d.m4a" preload = "auto"> </audio> 
+            </div> 
+            
+            <div id="e">
+            <img src="e.jpg"/> 
+            <audio id = "e1" src="audio/e.m4a" preload = "auto"> </audio> 
+            </div>
+            
+            <div id="f">
+            <audio id = "f1" src="audio/f.m4a" preload = "auto"> </audio> 
+            <img src="f.jpg"/> 
+            </div>
+            
+            <div id="g">
+            <audio id = "g1" src="audio/g.m4a" preload = "auto"> </audio> 
+            <img src="g.jpg"/> 
+            </div>
+            
+            <div id="h">
+            <audio id = "h1" src="audio/h.m4a" preload = "auto"> </audio> 
+            <img src="h.jpg"/> 
+            </div>
+            
+            <div id="i">
+            <audio id = "i1" src="audio/i.m4a" preload = "auto"> </audio> 
+            <img src="i.jpg"/> 
+            </div>
+            
+            <div id="j">
+            <audio id = "j1" src="audio/j.m4a" preload = "auto"> </audio> 
+            <img src="j.jpg"/>
+            </div> 
+            
+            <div id="k">
+            <img src="k.jpg"/> 
+            <audio id = "k1" src="audio/k.m4a" preload = "auto"> </audio> 
+            </div>
+            
+            <div id="l">
+            <audio id = "l1" src="audio/l.m4a" preload = "auto"> </audio> 
+            <img src="l.jpg"/>
+            </div> 
+            
+            <div id="m">
+            <audio id = "m1" src="audio/m.m4a" preload = "auto"> </audio>
+            <img src="m.jpg"/> 
+            </div>
+            
+            <div id="n">
+            <img src="n.jpg"/>
+            <audio id = "n1" src="audio/n.m4a" preload = "auto"> </audio> 
+            </div> 
+            
+            <div id="o">
+            <img src="o.jpg"/> 
+            <audio id = "o1" src="audio/o.m4a" preload = "auto"> </audio> 
+            </div>
+            
+            <div id="p">
+            <audio id = "p1" src="audio/p.m4a" preload = "auto"> </audio> 
+            <img src="p.jpg"/> 
+            </div>
+            
+            <div id="q">
+            <audio id = "q1" src="audio/q.m4a" preload = "auto"> </audio> 
+            <img src="q.jpg"/> 
+            </div>
+            
+            <div id="r">
+            <audio id = "r1" src="audio/r.m4a" preload = "auto"> </audio> 
+            <img src="r.jpg"/>
+            </div> 
+            
+            <div id="s">
+            <audio id = "s1" src="audio/s.m4a" preload = "auto"> </audio> 
+            <img src="s.jpg"/> 
+            </div>
+            
+            <div id="t">
+            <audio id = "t1" src="audio/t.m4a" preload = "auto"> </audio> 
+            <img src="t.jpg"/> 
+            </div>
+            
+            <div id="u">
+            <audio id = "u1" src="audio/u.m4a" preload = "auto"> </audio> 
+            <img src="u.jpg"/> 
+            </div>
+            
+            <div id="v">
+            <audio id = "v1" src="audio/v.m4a" preload = "auto"> </audio> 
+            <img src="v.jpg"/> 
+            </div>
+            
+            <div id="w">
+            <audio id = "w1" src="audio/w.m4a" preload = "auto"> </audio> 
+            <img src="w.jpg"/> 
+            </div>
+            
+            <div id="x">
+            <audio id = "x1" src="audio/x.m4a" preload = "auto"> </audio> 
+            <img src="x.jpg"/> 
+            </div>
+            
+            <div id="y">
+            <img src="y.jpg"/>
+            <audio id = "y1" src="audio/y.m4a" preload = "auto"> </audio>  
+            </div>
+            
+            <div id="z">
+            <audio id = "z1" src="audio/z.m4a" preload = "auto"> </audio> 
+            <img src="z.jpg"/> 
+            </div>  
+        </div>
+   	</div>
+    
+<script> 
+
+window.addEventListener("keydown", alphabet, false);
+
+var letterArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var audioArr = ["a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1", "i1", "j1", "k1", "l1", "m1", "n1", "o1", "p1", "q1", "r1", "s1", "t1", "u1", "v1", "w1", "x1", "y1", "z1"];
+
+		
+function alphabet(a){
+	var event= window.event ? window.event : a;
+	if (true) {
+				j = (event.keyCode) - 65;
+				document.getElementById(letterArr[j]).style.display = 'block';
+				document.getElementById(audioArr[j]).play();
+				setTimeout(function(){document.getElementById(letterArr[j]).style.display = 'none';}, 500);	
+	}
+
+	
+}
+
+
+
+alphabet
+for (i=0; i < letterArr.length; i++) {
+	document.getElementById(letterArr[i]).style.display = 'none';}
+
+
+
+</script> 
+</body>
+</html>
